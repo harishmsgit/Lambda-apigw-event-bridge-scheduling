@@ -1,0 +1,29 @@
+{
+  "ShopVerseProducts": [
+    {
+      "PutRequest": {
+        "Item": {
+          "product_id": { "S": "101" },
+          "name": { "S": "Product 101" },
+          "category": { "S": "Books" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "product_id": { "S": "102" },
+          "name": { "S": "Product 102" },
+          "category": { "S": "Electronics" }
+        }
+      }
+    },
+    {
+      "DeleteRequest": {
+        "Key": {
+          "product_id": { "S": "103" }
+        }
+      }
+    }
+  ]
+}
