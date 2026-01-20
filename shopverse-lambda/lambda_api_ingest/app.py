@@ -3,12 +3,17 @@ import os
 import uuid
 import boto3
 
+from common.utils import json_log
+
+
 # Get DynamoDB table name from environment variable (default: ShopVerseProducts)
 TABLE_NAME = os.getenv("TABLE_NAME", "ShopVerseProducts")
 
 # Initialize DynamoDB resource and table
 dynamodb = boto3.resource("dynamodb")
 table = dynamodb.Table(TABLE_NAME)
+
+logger.info(json_log("product_created", product_id=product_id, table=TABLE_NAME))
 
 def lambda_handler(event, context):
     """
